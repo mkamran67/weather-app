@@ -104,7 +104,8 @@ header p {
 
 /* List -> Search History */
 .city-list {
-  margin: 1rem auto;
+  margin: 1rem 0.5rem;
+  width: 90%;
 }
 
 .city-list ul {
@@ -113,6 +114,13 @@ header p {
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+.city-list ul li {
+  width: 100%;
+  display: block;
+  overflow: hidden;
 }
 
 /* List items */
@@ -125,6 +133,7 @@ header p {
   padding: 0.4rem;
   margin: 0.3rem 0;
   outline: none;
+  width: 100%;
 }
 .city-list ul li button:hover {
   cursor: pointer;
@@ -138,4 +147,40 @@ header p {
 /* Main Widget */
 .widget-container {
   background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-container .info-panel {
+  width: 100%;
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  border-radius: 5px;
+  margin: 1rem;
+}
+
+.widget-container .info-panel p {
+  font-size: 1.3rem;
+  margin: 1rem;
+}
+
+.widget-container .info-panel p:first-child {
+  margin: 1rem;
+  font-size: 3rem;
+}
+
+.widget-container .info-panel p:first-child i {
+  font-size: 2.5rem;
+}
+
+.widget-container .info-panel p span {
+  font-size: 1.3rem;
+}
+#uvIndex span {
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: #ffffff;
+  padding: 0.3rem;
+}
+.foreCast {
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
