@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/*  Layout */
+.grid-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 1fr 4fr 4fr;
+  grid-template-columns: 1.3fr 2fr 2fr;
+  grid-template-areas:
+    'nav nav nav'
+    'panel widget widget'
+    'panel widget widget'
+    'panel widget widget';
+  gap: 1rem;
+}
+
+header {
+  width: 100vw;
+  background-color: #343a40;
+  grid-area: nav;
+}
+.panel {
+  grid-area: panel;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+.widget-container {
+  grid-area: widget;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+/* Header Customization */
+header p {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.7rem 0;
+  margin: 0;
+}
+
+/* Left Panel */
+.panel {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+/* Search Container */
+.search {
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  color: #343a40;
+  border-radius: 3px;
+}
+/* Search Input */
+.search input {
+  font-size: 1.3rem;
+  padding: 0.3rem 0.3rem;
+  border: 1px solid rgba(200, 0, 0, 0.3);
+  border-radius: 3px;
+  transition: border 300ms;
+}
+
+.search input:hover {
+  border: 1px solid rgba(0, 0, 200, 0.5);
+}
+
+.search input:focus {
+  border: 1px solid rgba(0, 0, 200, 0.5);
+  outline: none;
+}
+/* Search Button */
+.search button {
+  background-color: #ffffff;
+  border: none;
+  margin: 0 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(200, 0, 0, 0.3);
+  transition: all 300ms;
+  outline: none;
+}
+
+.search button:hover {
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 200, 0.5);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 200, 0.5);
+}
+
+.search button i {
+  font-size: 1.4rem;
+}
+
+/* List -> Search History */
+.city-list {
+  margin: 1rem auto;
+}
+
+.city-list ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* List items */
+.city-list ul li button {
+  font-size: 1.5rem;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 3px;
+  background-color: #ffffff;
+  transition: border 250ms;
+  padding: 0.4rem;
+  margin: 0.3rem 0;
+  outline: none;
+}
+.city-list ul li button:hover {
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 200, 0.5);
+}
+
+.city-list ul li button:focus {
+  border: 1px solid rgba(0, 0, 200, 0.8);
+}
+
+/* Main Widget */
+.widget-container {
+  background-color: #f8f9fa;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Roboto Font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <!-- Font- Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/4b656fe325.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Personal Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <!-- Main Grid Container -->
+    <div class="grid-container">
+      <!-- Header -->
+      <header>
+        <p>Weather Dashboard</p>
+      </header>
+      <!-- Side Panel Containing Cities -->
+      <div class="panel">
+        <!-- Search -->
+        <div class="search">
+          City
+          <input type="text" id="citySearch" />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <!-- List -->
+        <div class="city-list">
+          <ul id="searchHistory">
+            <li><button>San Francisco</button></li>
+            <li><button>Lorem ipsum dolor</button></li>
+            <li><button>San Francisco</button></li>
+            <li><button>San Francisco</button></li>
+            <li><button>San Francisco</button></li>
+            <li><button>San Francisco</button></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Main Widget -->
+      <div class="widget-container">
+        <div class="info-pan">
+          <p id="cityDate">
+            Patterson (8/16/2020) <i class="fas fa-cloud"></i>
+          </p>
+          <p id="temperature">120 °F</p>
+          <p id="humidity">10%</p>
+          <p id="windSpeed">0.5 MPH</p>
+          <p id="uvIndex">9.49</p>
+        </div>
+        <div class="foreCast">
+          <ul id="forecastList">
+            <li class="card"></li>
+          </ul>
+        </div>
+        <div class="dayForecast"></div>
+      </div>
+    </div>
+    <!-- Personal Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
