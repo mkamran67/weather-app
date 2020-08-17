@@ -82,10 +82,10 @@ header p {
 }
 /* Search Button */
 .search button {
-  background-color: #ffffff;
+  background-color: #007bff;
   border: none;
-  margin: 0 5px;
-  padding: 5px;
+  margin: 0 0.2rem;
+  padding: 0.3rem;
   border-radius: 5px;
   border: 1px solid rgba(200, 0, 0, 0.3);
   transition: all 300ms;
@@ -99,7 +99,8 @@ header p {
 }
 
 .search button i {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  color: #ffffff;
 }
 
 /* List -> Search History */
@@ -181,6 +182,46 @@ header p {
   color: #ffffff;
   padding: 0.3rem;
 }
+
+/* Forecast */
 .foreCast {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  /* border: 1px solid rgba(0, 0, 0, 0.2); */
+  width: 100%;
+}
+
+.foreCast > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0.4rem 1rem 0.8rem 1rem;
+}
+
+#forecastList {
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-evenly;
+  list-style-type: none;
+  max-width: 70%;
+}
+
+/* Forecast Cards */
+.card {
+  background-color: #007bff;
+  padding: 1rem 0.5rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  margin: 0.5rem;
+}
+
+.card p,
+.card i {
+  padding: 0.5rem;
+}
+
+.card p:first-child {
+  font-weight: 400;
+  font-size: 1.3rem;
 }
