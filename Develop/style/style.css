@@ -62,6 +62,13 @@ header p {
   font-size: 1.3rem;
   color: #343a40;
   border-radius: 3px;
+  display: flex;
+}
+
+/* City - Text */
+.search > p {
+  font-size: 1.4rem;
+  margin: auto 0;
 }
 /* Search Input */
 .search input {
@@ -70,6 +77,7 @@ header p {
   border: 1px solid rgba(200, 0, 0, 0.3);
   border-radius: 3px;
   transition: border 300ms;
+  margin-left: 0.3rem;
 }
 
 .search input:hover {
@@ -154,7 +162,6 @@ header p {
 
 .widget-container .info-panel {
   width: 100%;
-  /* border: 1px solid rgba(0, 0, 0, 0.2); */
   border-radius: 5px;
   margin: 1rem;
 }
@@ -185,7 +192,6 @@ header p {
 
 /* Forecast */
 .foreCast {
-  /* border: 1px solid rgba(0, 0, 0, 0.2); */
   width: 100%;
 }
 
@@ -200,10 +206,7 @@ header p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: space-around;
-  justify-content: space-evenly;
   list-style-type: none;
-  max-width: 70%;
 }
 
 /* Forecast Cards */
@@ -214,6 +217,9 @@ header p {
   border: none;
   border-radius: 3px;
   margin: 0.5rem;
+}
+.card:first-child {
+  margin-left: 1rem;
 }
 
 .card p,
