@@ -1,10 +1,6 @@
-//  1. Search listener or History Click listener -> Run()
-//  2. Parse Search input
-//  3. Check if City is valid not empty.
-//  4. Load relevent City Weather information
-
+// Had to comment out Geo location due to Github complaining.
 //  Variables
-let initial = true;
+// let initial = true;
 
 // Run Function on document ready
 $('document').ready(() => {
@@ -21,12 +17,19 @@ $('document').ready(() => {
   $('#searchHistory').on('click', historyClick);
 
   if (localStorage.getItem('citylist') !== null) {
+    let lastAdd = getLocalStorage();
+    submitInput(lastAdd[0]);
     displayHistoryList();
+  } else {
+    submitInput('Berkeley');
   }
-
-  if (initial) {
-    submitInput();
-  }
+  // Commented out due to Github blocking my Geo API.
+  // if (initial) {
+  //   submitInput();
+  //  } else {
+  // let lastAdd = getLocalStorage();
+  // submitInput(lastAdd[0]);
+  // }
 });
 
 function historyClick(e) {
@@ -35,16 +38,16 @@ function historyClick(e) {
   }
 }
 
-async function initGeo() {
-  let data = '';
-  await $.ajax({
-    method: 'GET',
-    url: 'http://ip-api.com/json/',
-  }).then((res) => {
-    data = res.city;
-  });
-  return data;
-}
+// async function initGeo() {
+//   let data = '';
+//   await $.ajax({
+//     method: 'GET',
+//     url: 'http://ip-api.com/json/',
+//   }).then((res) => {
+//     data = res.city;
+//   });
+//   return data;
+// }
 
 function controllerFunc(e) {
   e.preventDefault();
@@ -53,9 +56,9 @@ function controllerFunc(e) {
 
 // Submit City Function
 async function submitInput(cityName = '') {
-  if (initial) {
-    cityName = await initGeo();
-  }
+  // if (initial) {
+  //   cityName = await initGeo();
+  // }
   console.log(cityName);
   let regSpace = new RegExp(/^ /);
   // Will hold weather data
@@ -79,7 +82,7 @@ async function submitInput(cityName = '') {
 
     // Send Name and Weather Object
     setDisplay(cityCoordinatesString.trueName, weatherObj);
-    initial = false;
+    // initial = false;
   } else {
     console.log(`Empty`);
   }
