@@ -14,7 +14,7 @@
   display: grid;
   height: 100vh;
   width: 100vw;
-  grid-template-rows: 1fr 4fr 4fr;
+  grid-template-rows: 0.4fr 4fr 4fr;
   grid-template-columns: 1.3fr 2fr 2fr;
   grid-template-areas:
     'nav nav nav'
@@ -53,7 +53,7 @@ header p {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 /* Search Container */
@@ -155,7 +155,7 @@ header p {
 
 /* Main Widget */
 .widget-container {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
