@@ -90,7 +90,7 @@ async function submitInput(cityName = '') {
 async function getCoordstring(city) {
   let mainQString = ``,
     trueName = '';
-  let cordinatesUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=1a0eaaf9b7dc51f4a1835f73728c07a2`;
+  let cordinatesUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=1a0eaaf9b7dc51f4a1835f73728c07a2`;
 
   await $.ajax({
     method: 'GET',
