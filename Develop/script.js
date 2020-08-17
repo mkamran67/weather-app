@@ -133,7 +133,7 @@ async function getWeather(qString) {
 
 function setDisplay(name, { current, daily }) {
   // Set Icon corresponding to current conditions
-  let iconUrl = `http://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`;
+  let iconUrl = `https://openweathermap.org/img/wn/${current.weather[0].icon}@2x.png`;
 
   $('#cityDate').html(
     `
@@ -167,7 +167,7 @@ function setDisplay(name, { current, daily }) {
     cardList += `
     <li class="card">
         <p>${moment(daily[i].dt * 1000).format('M[/]DD[/]YYYY')}</p>
-        <img src='http://openweathermap.org/img/wn/${
+        <img src='https://openweathermap.org/img/wn/${
           daily[i].weather[0].icon
         }@2x.png' alt='${daily[i].weather[0].main}'/>
         <p>Temp: <span>${daily[i].temp.day}</span> °F</p>
